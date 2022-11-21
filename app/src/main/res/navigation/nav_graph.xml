@@ -3,26 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/ListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.greattodo.FirstFragment"
+        android:id="@+id/ListFragment"
+        android:name="com.example.greattodo.ListFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        tools:layout="@layout/list_first">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_ListFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.greattodo.SecondFragment"
+        android:name="com.example.greattodo.CreateFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        tools:layout="@layout/createfragment"/>
+    <fragment
+        android:id="@+id/setting_Fragment"
+        android:name="com.example.greattodo.Setting_Fragment"
+        android:label="fragment_setting_"
+        tools:layout="@layout/fragmentsetting_" />
 </navigation>
