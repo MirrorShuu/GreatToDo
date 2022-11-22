@@ -12,6 +12,7 @@ import android.view.MenuItem
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.greattodo.databinding.ActivityMainBinding
+import com.example.greattodo.models.ToDo
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,5 +24,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
     }
+
+
+
 }
