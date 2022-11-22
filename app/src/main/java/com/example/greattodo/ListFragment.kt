@@ -30,9 +30,6 @@ class ListFragment : Fragment() {
         binding.btmCreate.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_createFragment)
         }
-//        binding.btmSetting.setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_Setting_Fragment)
-//        }
     }
 
     override fun onDestroyView() {

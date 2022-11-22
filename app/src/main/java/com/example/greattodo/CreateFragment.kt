@@ -27,6 +27,11 @@ class CreateFragment : Fragment() {
     }
 
 
+
+        binding.btmSave.setOnClickListener {
+            findNavController().navigate(R.id.action_ListFragment_to_SecondFragment)
+        }
+    }
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?

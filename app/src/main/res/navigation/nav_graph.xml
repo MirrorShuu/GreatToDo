@@ -20,15 +20,19 @@
     <fragment
         android:id="@+id/createFragment"
         android:name="com.example.greattodo.CreateFragment"
-        android:label="createfragment"
-        tools:layout="@layout/createfragment" >
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/createfragment">
         <action
-            android:id="@+id/action_createFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            android:id="@+id/action_SecondFragment_to_setting_Fragment"
+            app:destination="@id/setting_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/setting_Fragment"
         android:name="com.example.greattodo.Setting_Fragment"
-        android:label="fragmentsetting_"
-        tools:layout="@layout/fragmentsetting_" />
+        android:label="fragment_setting_"
+        tools:layout="@layout/fragmentsetting_" >
+        <action
+            android:id="@+id/action_setting_Fragment_to_ListFragment"
+            app:destination="@id/ListFragment" />
+    </fragment>
 </navigation>
