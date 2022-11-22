@@ -12,7 +12,6 @@ import com.example.greattodo.databinding.ListFirstBinding
 class ListFragment : Fragment() {
 
     private var _binding: ListFirstBinding? = null
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,7 +28,7 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btmCreate.setOnClickListener {
-            findNavController().navigate(R.id.action_ListFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_listFragment_to_createFragment)
         }
 //        binding.btmSetting.setOnClickListener {
 //            findNavController().navigate(R.id.action_FirstFragment_to_Setting_Fragment)

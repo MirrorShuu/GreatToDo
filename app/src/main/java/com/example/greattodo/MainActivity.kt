@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.example.greattodo.databinding.ActivityMainBinding
+import com.example.greattodo.models.ToDo
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,14 +22,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupActionBarWithNavController(findNavController(R.id.fragment))
+
 
     }
 
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.fragment)
-        return navController.navigateUp()
-                || super.onSupportNavigateUp()
-    }
+
 }
