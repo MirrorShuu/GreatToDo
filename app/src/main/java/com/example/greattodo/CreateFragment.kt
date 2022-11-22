@@ -10,6 +10,7 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.greattodo.databinding.CreatefragmentBinding
+import com.example.greattodo.models.Color
 import com.example.greattodo.models.ToDo
 
 
@@ -20,28 +21,23 @@ class CreateFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.btmSave.setOnClickListener {
-            binding.etTitle
-        }
 
     }
-
-
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
             _binding = CreatefragmentBinding.inflate(inflater, container, false)
             return binding.root
-            binding.spinnerColor.adapter(ArrayAdapter<Color>.)
+//            binding.spinnerColor.adapter(ArrayAdapter<Color>.)
 
         }
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
 
-            binding.btmExit.setOnClickListener {
-                findNavController().navigate(R.id.action_createFragment_to_listFragment)
+            binding.btmSave.setOnClickListener {
+                findNavController().navigate(R.id.action_listFragment_to_createFragment)
             }
         }
 
