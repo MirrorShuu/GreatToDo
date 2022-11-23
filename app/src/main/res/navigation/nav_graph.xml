@@ -21,10 +21,14 @@
         android:id="@+id/createFragment"
         android:name="com.example.greattodo.CreateFragment"
         android:label="createfragment"
-        tools:layout="@layout/createfragment" />
+        tools:layout="@layout/createfragment" >
+        <action
+            android:id="@+id/action_createFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
     <fragment
         android:id="@+id/setting_Fragment"
-        android:name="com.example.greattodo.Setting_Fragment"
+        android:name="com.example.greattodo.SettingFragment"
         android:label="fragmentsetting_"
         tools:layout="@layout/fragmentsetting_" />
 </navigation>
