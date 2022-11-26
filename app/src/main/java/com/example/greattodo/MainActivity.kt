@@ -25,13 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val PROJECTION = arrayOf(Color.values())
 
-//        val spinner1: Spinner = findViewById(R.id.spinner_color)
-//        val adapter1 = ArrayAdapter.createFromResource(
-//            this, Color.values().size, android.R.layout.simple_spinner_item)
-//        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//        spinner1.adapter = adapter1
 
 
 

@@ -7,7 +7,7 @@ enum class Color(val resId: Int) {
     YELLOW(R.color.yellow,),
     GREEN(R.color.green),
     BLUE(R.color.blue,),
-    WHITE(R.color.white,);
+    WHITE(R.color.grey,);
 
 
 

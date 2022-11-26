@@ -11,85 +11,73 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.greattodo.databinding.CreatefragmentBinding
+import com.example.greattodo.models.DataBase
 import com.example.greattodo.models.ToDo
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
 
-class CreateFragment : Fragment()  {
+class CreateFragment : Fragment() {
 
     private var _binding: CreatefragmentBinding? = null
     private val binding get() = _binding!!
-    private lateinit var titleText: String
-    private lateinit var descriptionText: String
-    private val color = arrayOf("red","blue","white")
+
+
+    
+ 
 
 
 
-
-    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
 
 
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = CreatefragmentBinding.inflate(inflater, container, false).apply {
+            btmSave.setOnClickListener{save()}
+            btmExit.setOnClickListener{
+                for (i in DataBase.listTodo){
+                    Log.d("myTag", i.toString())
+                }
+            }
+        }
+
+        return binding.root
 
 
 
     }
-        override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            _binding = CreatefragmentBinding.inflate(inflater, container, false)
-            return binding.root
-        }
 
-        @RequiresApi(Build.VERSION_CODES.O)
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            super.onViewCreated(view, savedInstanceState)
-
-            save()
+    fun save(){
+            val title = binding.etTitle.text.toString()
+            val description = binding.etDescription.text.toString()
+            val color = binding.red
+            val priority = binding.btmLow
+            var todo = ToDo(title = title,description = description, date = System.currentTimeMillis())
+        DataBase.listTodo.add(todo)
 
 
+    }
 
-//            val spinner = binding.spinnerColor
-//            ArrayAdapter.createFromResource(
-//                requireContext(),
-//                R.array.color,
-//                android.R.layout.simple_spinner_item
-//            ).also { adapter ->
-//                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//                spinner.adapter = adapter
-//            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        }
-
-
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    private fun save(){
-        titleText = binding.etTitle.text.toString()
-        descriptionText = binding.etDescription.text.toString()
-        binding.btmSave.setOnClickListener {
-            val simpleDateFormat = DateTimeFormatter.ofPattern("HH:mm:ss")
-            val dateTime: String = LocalDateTime.now().format(simpleDateFormat)
-            Log.d("myTag", dateTime)
-             ToDo(titleText,descriptionText,dateTime)
-            findNavController().navigate(R.id.action_createFragment_to_listFragment)
-
-        }
 
     }
 
 
-
-        override fun onDestroyView() {
-            super.onDestroyView()
-            _binding = null
-        }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
+}
 
 
 
