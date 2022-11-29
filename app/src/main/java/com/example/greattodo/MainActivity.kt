@@ -1,21 +1,12 @@
 package com.example.greattodo
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 import com.example.greattodo.databinding.ActivityMainBinding
-import com.example.greattodo.models.Color
-import com.example.greattodo.models.ToDo
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityMainBinding
 
@@ -26,13 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
-
-
-
-
     }
-
-
 
 }

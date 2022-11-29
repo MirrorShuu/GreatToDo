@@ -1,8 +1,10 @@
 package com.example.greattodo.models
 
+import android.widget.Button
+
 data class ToDo(
     val title: String,
     val description: String,
     val date: Long,
-    var color: Color = Color.WHITE,
+    var color: Button,
     var priority: Priority = Priority.LOW)
