@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btm_high" />
 
-    <Button
+    <View
         android:id="@+id/red"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -63,7 +63,7 @@
         android:clickable="true"
         android:focusable="true" />
 
-    <Button
+    <View
         android:id="@+id/yellow"
         android:layout_width="40dp"
         android:layout_height="40dp"

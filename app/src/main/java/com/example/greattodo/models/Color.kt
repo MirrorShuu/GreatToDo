@@ -10,20 +10,7 @@ enum class Color(val resId: Int) {
     WHITE(R.color.grey,);
 
 
-
 }
-
-//enum class MyEnum {
-//    FOO,
-//    BAR
-//}
-//
-//
-//val bundle = Bundle()
-//bundle.putAll(bundleOf("myKey", MyEnum.FOO))
-//
-//// to read
-//val myEnum = bundle.get("myKey") as MyEnumClass
 
 
 
