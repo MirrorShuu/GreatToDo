@@ -13,13 +13,16 @@ class ListFragment : Fragment() {
 
     private var _binding: ListFirstBinding? = null
     private val binding get() = _binding!!
+    private val adapter = ListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = ListFirstBinding.inflate(inflater, container, false)
+        _binding = ListFirstBinding.inflate(inflater, container, false).apply {
+            recycler.adapter = adapter
+        }
         return binding.root
 
     }

@@ -1,6 +1,10 @@
 package com.example.greattodo
 
-import android.annotation.SuppressLint
+import  android.annotation.SuppressLint
+import android.media.Image
+import android.widget.ImageView
+import com.example.greattodo.models.Color
+import java.lang.reflect.Array.get
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -10,3 +14,7 @@ fun Long.formatDate(): String{
      val date = Date(this)
      return sdf.format(date)
  }
+
+fun ImageView.load(id: Int){
+
+}
